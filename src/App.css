@@ -1,0 +1,53 @@
+
+.App{
+  margin-left: 40%;
+}
+.display ,.row1, .row2, .row3, .row4, .row5 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.display {
+  width: 280px;
+  background-color: #a9a9a9;
+  /* float:right; */
+  border: 1px solid #666666;
+  justify-content: flex-end;
+}
+
+.showValue {
+  font-size: 40px;
+  color:white;
+  float: right;
+}
+button {
+  background-color: #E0E0E6;
+  font-size: 40px;
+  text-align: center;
+  color: #666666;
+  border-left: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  border-right: 1px solid #666666;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: block;
+  width: 70px;
+}
+
+
+.zero{
+  text-align: left;
+  width: 140px;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
+}
+
+.orange {
+  background-color: #EE9B3E;
+  color: #fff;
+}
