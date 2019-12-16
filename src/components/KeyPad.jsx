@@ -13,7 +13,7 @@ class KeyPad extends React.Component {
                         <p className='showValue'>{this.props.display}</p>
                     </div>
                     <div className='row1'>
-                        <button onClick={this.props.resetCalculator} className='row1'>AC</button>
+                        <button onClick={this.props.resetCalculator} className='row1' id="clear">AC</button>
                         <button onClick={this.props.buttonChange} className='row1'>+/-</button>
                         <button onClick={this.props.handlePercent} className='row1' value = '%'>%</button>
                         <button onClick={this.props.operatorValue} className='orange' value = '/'>/</button>

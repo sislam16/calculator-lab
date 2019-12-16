@@ -18,7 +18,7 @@ class App extends React.Component {
     }
 
     resetCalculator = (event) =>{
-        button.innerText = 
+        // restart.innerText = 'C' 
         this.setState ({
             display: 0,
             previous: null,
@@ -75,6 +75,15 @@ class App extends React.Component {
                 display: result
             })
     }
+
+    // doubleDigits = () =>{
+    //     const { previous, display, operator} = this.state
+    //     if(!operator) {
+    //         this.setState({
+    //             display: 
+    //         })
+    //     }
+    // }
 
     render() {
         return (
