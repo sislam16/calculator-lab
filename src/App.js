@@ -9,7 +9,8 @@ class App extends React.Component {
         this.state = {
             display: 0,
             previous: null,
-            operator: null
+            operator: null,
+            negative: false
         }
     }
 
@@ -20,17 +21,23 @@ class App extends React.Component {
     resetCalculator = (event) =>{
         // restart.innerText = 'C' 
         this.setState ({
-            display: 0,
+            display: "0",
             previous: null,
             operator: null
         })
     }
 
     buttonChange = (event) => {
-        // console.log('event.target.value', event.target.value)
-        this.setState({
-            display: event.target.value
-        })
+        let {display, operator} = this.state
+        if(!operator){
+            this.setState({
+                display: Number(display += event.target.value)
+            })
+        } else{
+            this.setState({
+                display: event.target.value
+            })
+        }
     }
 
     operatorValue = (event) => {
@@ -76,16 +83,18 @@ class App extends React.Component {
             })
     }
 
-    // doubleDigits = () =>{
-    //     const { previous, display, operator} = this.state
-    //     if(!operator) {
-    //         this.setState({
-    //             display: 
-    //         })
-    //     }
-    // }
+    toggleNegative = () =>{
+        const { display, negative, operator } = this.state
+        if(display){
+            this.setState({
+                display: - display,
+                negative: true
+            })
+        }
+    }
 
     render() {
+        console.log(this.state)
         return (
             <div className="App">
                 <KeyPad
@@ -96,6 +105,7 @@ class App extends React.Component {
                     solveEquation ={this.solveEquation}
                     resetCalculator ={this.resetCalculator}
                     handlePercent = {this.handlePercent}
+                    toggleNegative = {this.toggleNegative}
                 />
             </div>
         );
