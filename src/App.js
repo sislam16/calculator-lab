@@ -90,7 +90,7 @@ class App extends React.Component {
     }
 
     toggleNegative = () =>{
-        const { display, negative, operator } = this.state
+        const { display } = this.state
         if(display){
             this.setState({
                 display: - display,
@@ -100,7 +100,7 @@ class App extends React.Component {
     }
 
     handleDecimal = () =>{
-        const {display, operator} = this.state
+        const {display } = this.state
         if(display.toString().includes('.')){
             this.setState({
                 display: display 
